@@ -44,13 +44,13 @@ public class MyString {
         
         boolean contain = false;
         int lastIndex = str1.length () - str2.length () + 1;
-        for (int i = 0; i < lastIndex && !contain; i++){
+        for (int i = 0; i < lastIndex && !contain; i++){ // isso para quando volta o loop
             boolean match = true; // assume true until proved otherwise
                 for (int j =0; j < str2.length(); j++){
                     if (str1.charAt (i + j) != str2.charAt(j)){
                         match = false;
                         break;
-                    }
+                    }  // entra no externo e faz pro i = 0 toda as rodadas do j ai dps p i = 1 todas as rodadas do j 
                 }
                 if (match) {
                     contain = true;
