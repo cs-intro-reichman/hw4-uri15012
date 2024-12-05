@@ -22,6 +22,7 @@ public class ArrCharOps {
         System.out.println(compareTo("Zoo", "zoo"));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
+        
     }
 
     /** Prints the given array of characters, and moves the cursor to the next line.
@@ -36,16 +37,22 @@ public class ArrCharOps {
     /** Returns the char value at the specified index. Assume that the array is non-empty.
      */
     public static char charAt(char[] arr, int index) {
-        // Replace the following statement with your code
-        return 0;
+       
+        return arr [index];
     }
 
     /** If the two arrays have the same value in every index, 
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
-        return false;
+        
+        for (int i = 0; i < arr1.length; i++){
+            if (arr1[i] != arr2[i]){ // mas agora caixa e caixao vai ter problema 
+                return false;
+            }
+        }
+       return true;
+        
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
